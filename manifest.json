@@ -1,0 +1,21 @@
+{
+    "name": "expbox",
+    "description": "pfy expbox",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "expbox.html"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "jquery-3.7.0.min.js",
+                "jquery.tabletojson.min.js",
+                "content.js"
+            ],
+            "matches": [
+                "https://www.lyouoa.com/*/Regulate/Regulate_HotelOrder"
+            ]
+        }
+    ]
+}
