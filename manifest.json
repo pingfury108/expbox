@@ -10,7 +10,6 @@
         {
             "js": [
                 "jquery-3.7.0.min.js",
-                "jquery.tabletojson.min.js",
                 "content.js"
             ],
             "matches": [
