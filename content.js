@@ -41,5 +41,5 @@ $.each(items, function( index, item ){
         fj_text = fj_text + text;
     }
 
-    ff_div = new_item.after(`<div class='expbox' style='float:right;'> <textarea style='width: 300%;height: 97.5%;'>酒店名称: ${dd.to}\n团号: ${dd.th}\n导游信息: ${dd.du}\n用房信息: ${fj_text}</textarea></div>`);
+    ff_div = new_item.after(`<div class='expbox' style='float:right;'> <textarea style='width: 300%;height: 97.5%;'>酒店名称: ${dd.to}\n团号: ${dd.th}\n导游信息: ${dd.du}\n原订: \n现麻烦变更为:\n ${fj_text}\n确认变更回复，谢谢</textarea></div>`);
 });
