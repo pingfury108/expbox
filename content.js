@@ -39,7 +39,7 @@ $.each(items, function( index, item ){
                     for (t in ff){
                         ft_text.push(`${ff[t].count} ${ff[t].ft}`);
                     }
-                    text = `用房时间: ${i},    ${ft_text.join(" + ")}`;
+                    text = `${i}日, 用房: ${ft_text.join(" + ")}`;
 
                     fj_text.push(text);
                 }
