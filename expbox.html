@@ -1,11 +1,19 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <script src="jquery-3.7.0.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
-<body>
-    <h1>expbox</h1>
+<body style="width: 250px;">
+    <div class="container-fluid text-center d-grid gap-2 mx-auto"
+        style="margin:auto; padding-top: 10px; padding-bottom: 10px;">
+        <button type="button" id="expbox-on" class="btn btn-outline-primary">显示摘要</button>
+        <button type="button" id="expbox-off" class="btn btn-outline-primary">不显示摘要</button>
+    </div>
     <script src="expbox.js"></script>
 </body>
 

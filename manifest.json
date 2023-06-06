@@ -6,6 +6,9 @@
     "action": {
         "default_popup": "expbox.html"
     },
+    "permissions": [
+        "storage"
+    ],
     "content_scripts": [
         {
             "js": [
