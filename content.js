@@ -11,7 +11,7 @@ function summary() {
         dd = {};
         dd.to = $(".tab-blank > tbody > tr > td:eq(1)", item).text();
         dd.th = $(".tab:eq(0) > tbody > tr > td:eq(1)", item).text();
-        dd.du = $(".tab:eq(0) > tbody > tr > td:eq(3)", item).text().replace(/\(.*\)$/, "");
+        dd.du = $(".tab:eq(0) > tbody > tr > td:eq(3)", item).text().replace(/(.*)\((.*?)\)/, "$1");
 
         dd.fj = {};
         n = $(".tab:eq(1) > tbody > tr", item).length;
