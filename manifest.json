@@ -16,7 +16,8 @@
                 "content.js"
             ],
             "matches": [
-                "https://www.lyouoa.com/*/Regulate/Regulate_HotelOrder"
+                "https://www.lyouoa.com/*/Regulate/Regulate_HotelOrder",
+                "http://www.lyouoa.com/*/Regulate/Regulate_HotelOrder"
             ]
         }
     ]
