@@ -17,7 +17,9 @@
             ],
             "matches": [
                 "https://www.lyouoa.com/*/Regulate/Regulate_HotelOrder",
-                "http://www.lyouoa.com/*/Regulate/Regulate_HotelOrder"
+                "http://www.lyouoa.com/*/Regulate/Regulate_HotelOrder",
+                "http://*.lyouoa.com/*/Regulate/Regulate_HotelOrder",
+                "https://*.lyouoa.com/*/Regulate/Regulate_HotelOrder"
             ]
         }
     ]
