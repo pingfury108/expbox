@@ -55,14 +55,8 @@ function parseOperationDetail(rows){
         var text = row["操作"].split(" ").filter((w)=> w != "");
 
         //row.text = text;
-        row.type = text[0].replace(/
-?
-|
-/g,"");
-        row.describe = text[1].replace(/
-?
-|
-/g,"");
+        row.type = text[0].replace(/\r?\n|\r/g,"");
+        row.describe = text[1].replace(/\r?\n|\r/g,"");
         row.hotel = function(){
             const regx = /酒店名称：(.*?)，/;
             const name = text[2].match(regx);
