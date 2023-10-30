@@ -1,26 +1,24 @@
 {
-    "name": "expbox",
-    "description": "pfy expbox",
-    "version": "0.0.1",
-    "manifest_version": 3,
-    "action": {
-        "default_popup": "expbox.html"
-    },
-    "permissions": [
-        "storage"
-    ],
-    "content_scripts": [
-        {
-            "js": [
-                "jquery-3.7.0.min.js",
-                "content.js"
-            ],
-            "matches": [
-                "https://www.lyouoa.com/*/Regulate/Regulate_HotelOrder",
-                "http://www.lyouoa.com/*/Regulate/Regulate_HotelOrder",
-                "http://*.lyouoa.com/*/Regulate/Regulate_HotelOrder",
-                "https://*.lyouoa.com/*/Regulate/Regulate_HotelOrder"
-            ]
-        }
-    ]
+  "name": "expbox",
+  "description": "pfy expbox",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "expbox.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "jquery-3.7.0.min.js",
+        "content.js"
+      ],
+      "matches": [
+        "*://hk.et818.com/*",
+        "*://*.lyouoa.com/*/Regulate/Regulate_HotelOrder"
+      ]
+    }
+  ]
 }
