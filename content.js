@@ -97,7 +97,7 @@ function summary_hket() {
         for (t in ff) {
             ft_text.push(`${ff[t].count} ${ff[t].ft}`);
         }
-        text = `${i}日, 用房: ${ft_text.join(" + ")}`;
+        text = `${i.split("-").join("月")}日, 用房: ${ft_text.join(" + ")}`;
 
         fj_text.push(text);
     }
@@ -108,6 +108,7 @@ function summary_hket() {
 
     text_1 = `<div class='expbox' style='position: absolute; left: ${w + offset + 50 + new_item.width()}px; margin: 60px auto auto;'>
                             <textarea style='width: ${w}px; height: ${h}px;'>团号: ${dd.th}\n导游信息: ${dd.du}\n原订: \n现麻烦变更为:\n\t${fj_text.join("\n\t")}\n确认变更回复，谢谢</textarea></div>`
+
     text_2 = `<div class='expbox' style='position: absolute; left: 10px; margin: 60px auto auto;'>
 <textarea style='width: ${w}px; height: ${h}px;'>用房信息:\n\t${fj_text.join("\n\t")}\n麻烦收到确认回复,谢谢</textarea></div>`
 
