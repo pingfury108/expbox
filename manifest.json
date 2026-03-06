@@ -17,7 +17,7 @@
       ],
       "matches": [
         "*://hk.et818.com/*",
-        "*://*.lyouoa.com/*/Regulate/Regulate_HotelOrder"
+        "*://*.lyouoa.com/*/Regulate/Regulate_HotelOrder*"
       ]
     }
   ]

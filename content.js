@@ -1,10 +1,14 @@
 
 function summary() {
+    // 设置 body 为定位参考
+    $("body").css({ "position": "relative", "width": "100%", "overflow-x": "hidden" });
+
     items = $(".regulateItem");
     $.each(items, function (index, item) {
-        $(".tab:eq(1)", item).css({ "display": "-webkit-box", "width": "800px" });
-        new_item = $(".tab:eq(1) > tbody", item); //.wrap("<div class='expbox'></div>");
+        $(".tab", item).css("display", "");
+        new_item = $(".tab:eq(1) > tbody", item);
 
+        // 按原始逻辑计算宽度
         w = ($("body").width() - new_item.width()) / 2 - 15;
         h = new_item.height() - 4.5;
 
@@ -45,14 +49,26 @@ function summary() {
             fj_text.push(text);
         }
 
-        ff_div = new_item.after(`<div class='expbox' style='position: absolute; left: ${w + 800 + 28}px;'>
-<textarea style='width: ${w}px; height: ${h}px;'>
-团号: ${dd.th}\n导游信息: ${dd.du}\n原订: \n现麻烦变更为:\n\t${fj_text.join("\n\t")}\n确认变更回复，谢谢
-</textarea></div>`);
+        // 基于 item 的位置计算（相对于 body）
+        var item_offset = $(item).offset();
+        var item_top = item_offset.top;
+        var item_left = item_offset.left;
 
-        fb_div = new_item.before(`<div class='expbox' style='position: absolute; left: 10px;'>
+        // 假设内容在页面中居中，计算左右两侧的位置
+        var center_x = $("body").width() / 2;
+        var left_box_left = 10;  // 左侧固定 left: 10px
+        var right_box_left = center_x + 400 + 10;  // 右侧不偏移
+
+        // 左侧
+        $("body").append(`<div class='expbox' style='position: absolute; top: ${item_top + 149}px; left: ${left_box_left}px;'>
 <textarea style='width: ${w}px; height: ${h}px;'>
 用房信息:\n\t${fj_text.join("\n\t")}\n麻烦收到确认回复,谢谢
+</textarea></div>`);
+
+        // 右侧
+        $("body").append(`<div class='expbox' style='position: absolute; top: ${item_top + 149}px; left: ${right_box_left}px;'>
+<textarea style='width: ${w}px; height: ${h}px;'>
+团号: ${dd.th}\n导游信息: ${dd.du}\n原订: \n现麻烦变更为:\n\t${fj_text.join("\n\t")}\n确认变更回复，谢谢
 </textarea></div>`);
     });
 
